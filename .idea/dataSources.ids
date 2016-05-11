@@ -165,8 +165,8 @@
       <table id="3" parent="1" name="password_resets"/>
       <table id="4" parent="1" name="users"/>
       <table id="5" parent="1" name="posts"/>
-      <table id="6" parent="1" name="group"/>
-      <table id="7" parent="1" name="users_group"/>
+      <table id="6" parent="1" name="roles"/>
+      <table id="7" parent="1" name="role_user"/>
       <column id="8" parent="2" name="migration">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
@@ -272,32 +272,18 @@
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="35" parent="6" name="created_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <column id="36" parent="6" name="updated_at">
-        <data-type>timestamp</data-type>
-      </column>
-      <key id="37" parent="6" name="PRIMARY">
+      <key id="35" parent="6" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="38" parent="7" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-      </column>
-      <column id="39" parent="7" name="user_id">
+      <column id="36" parent="7" name="user_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="40" parent="7" name="group_id">
+      <column id="37" parent="7" name="role_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="41" parent="7" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
     </database-model>
   </data-source>
 </component>
