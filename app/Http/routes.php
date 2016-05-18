@@ -29,3 +29,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::post('/plus/{id}',['middleware' => ['auth', 'web']], "PostController@plus");
+
+Route::group(['middleware' => ['web', 'auth']], function () {
+	Route::post('/plus/{id}','PostController@plus');
+});
